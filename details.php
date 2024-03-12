@@ -5,7 +5,7 @@
 
 	$id = getGet('id');
 	$product = executeResult('select * from products where id = '.$id, true);
-	echo $product['id'];
+	// echo $product[0]['title'];
 	if($product == null) {
 		header('Location: products.php');
 		die();
@@ -15,20 +15,15 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-5">
-			<img style="width: 100%" src="<?=$product['thumbnail']?>">
+			<img style="width: 100%" src="<?=$product[0]['thumbnail']?>">
 		</div>
 		<div class="col-md-7">
-			<h4><?=$product['title']?></h4>
-			<p style="font-size: 36px; mau: red"><?=number_format($product['price'], 0, ',', '.')?></p>
+			<h4><?=$product[0]['title']?></h4>
+			<p style="font-size: 36px; mau: red"><?=number_format($product[0]['price'], 0, ',', '.')?></p>
 			<button class="btn btn-success" style="width: 100%; font-size: 30px;" onclick="addToCart(<?=$id?>)">Add to cart</button>
 		</div>
 		<div class="col-md-12">
-			<?=$product['content']?>
-			<!-- duplicate -> code for fun -->
-			<?=$product['content']?>
-			<?=$product['content']?>
-			<?=$product['content']?>
-			<?=$product['content']?>
+			<?=$product[0]['content']?>
 		</div>
 	</div>
 </div>

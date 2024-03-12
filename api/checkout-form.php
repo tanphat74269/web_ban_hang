@@ -23,7 +23,7 @@ if(!empty($_POST)) {
 	$sql = "select * from orders where order_date = '$orderDate'";
 	$order = executeResult($sql, true);
 	
-	$orderId = $order['id'];
+	$orderId = $order[0]['id'];
 
 	$idList = [];
 	foreach ($cart as $item) {

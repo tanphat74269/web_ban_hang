@@ -10,6 +10,7 @@
 		$json = $_COOKIE['cart'];
 		$cart = json_decode($json, true);
 	}
+	// echo $cart[0]['num'];		
 	$idList = [];
 	foreach ($cart as $item) {
 		$idList[] = $item['id'];
@@ -57,8 +58,8 @@
 				<thead>
 					<tr>
 						<th>No</th>
-						<th>Num</th>
 						<th>Title</th>
+						<th>Num</th>
 						<th>Price</th>
 						<th>Total</th>
 					</tr>
