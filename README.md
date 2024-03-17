@@ -2,5 +2,5 @@
 Web bán hàng
 
 công nghệ sử dụng:
-- backend: laravel
+- backend: laravel, mysql
 - frontend: html, css, js
