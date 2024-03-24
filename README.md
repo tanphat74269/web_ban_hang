@@ -1,6 +1,6 @@
-# web_ban_hang
+# Web_Ban_Hang
 Web bán hàng
 
-công nghệ sử dụng:
-- backend: laravel, mysql
-- frontend: html, css, js
+Công nghệ sử dụng:
+- Backend: laravel, mysql
+- Frontend: html, css, js
